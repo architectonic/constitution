@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "constitution",
+  "description": "Default Architectonic scaffold composed from canonical source packages.",
+  "layers": [
+    "constitution",
+    "doctrine",
+    "identity",
+    "project",
+    "skills",
+    "knowledge",
+    "meta"
+  ],
+  "aliases": {
+    "init": "constitution"
+  },
+  "source_policy": "Install layers directly from their canonical source repositories; do not duplicate layer contents inside this bundle."
+}

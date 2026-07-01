@@ -4,6 +4,13 @@
   "description": "Root constitutional scaffold for composing Architectonic layers.",
   "license": "Apache-2.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/architectonic/constitution.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "README.md",
     "constitution.md",

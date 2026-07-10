@@ -1,6 +1,6 @@
 {
   "name": "architectonic-constitution",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Root constitutional scaffold for composing Architectonic layers.",
   "license": "Apache-2.0",
   "type": "module",

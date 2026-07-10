@@ -1,15 +1,15 @@
 ---
 type: Entry Point
 title: constitution
-description: Root constitutional scaffold for composing doctrine, identity, project, skills, knowledge, and meta layers.
-tags: [constitution, architectonic, scaffold, okf]
-okf_version: "0.1"
+description: Composition contract for the Architectonic software ensemble.
+tags: [constitution, architectonic, composition, okf]
+okf_version: "0.2"
 status: draft
 ---
 
 # constitution
 
-`constitution` is the default Architectonic scaffold for a human-agent system.
+`constitution` defines how the Architectonic packages are composed into a coherent workspace for human-AI collaboration.
 
 Install it with:
 
@@ -17,55 +17,37 @@ Install it with:
 npx architectonic add constitution
 ```
 
-`npx architectonic init` is an alias for adding the constitution scaffold into a new workspace.
+`npx architectonic init` creates a workspace and installs the constitution ensemble.
 
-The default scaffold installs the core stack:
+## Ensemble
 
 ```text
-doctrine   -- governing principles, purpose, ethics, ontology, epistemology, governance, incentives
-identity   -- actors, roles, authority, delegation, incentives, privacy
-project    -- operating-unit context, sources, decisions, risks, artifacts
-skills     -- reusable procedures and verification
-knowledge  -- disclosed corpus of knowledge and evidence
-meta       -- self-observation, upkeep, drift control, recursive improvement
+doctrine          -- purpose, principles, ontology, epistemology, ethics, governance, incentives
+identity          -- actors, roles, authority, delegation, incentives, privacy
+project           -- operating-unit context, sources, decisions, risks, and continuity
+skills            -- reusable procedures, verification, and failure handling
+knowledge         -- claims, sources, evidence, uncertainty, and known unknowns
+models            -- model capabilities, constraints, evaluations, cost, and routing evidence
+agents            -- composed software actors with identity, skills, models, knowledge, and permissions
+living-knowledge  -- governed maintenance of changing knowledge corpora
+meta              -- audit, upkeep, drift review, and revision policy
 ```
-
-Optional addon:
-
-```bash
-npx architectonic add living-knowledge
-```
-
-`living-knowledge` is not part of the default constitution install. It is a separate maintenance layer for teams that want explicit corpus campaigns and publication gates.
 
 ## Role
 
-A constitution is the governing scaffold that binds the system's purpose, actors, operating unit, reusable skills, knowledge corpus, and upkeep procedures without making any one layer the source of truth for the others.
-
-The constitution bundle is composed from canonical source packages:
+A constitution is a composition contract. It identifies the packages that participate, defines their boundaries, and establishes how authority flows between them without making any package the source of truth for the others.
 
 ```text
-doctrine   -- governing principles, purpose, ethics, ontology, epistemology, governance, incentives
-identity   -- actors, roles, authority, delegation, incentives, privacy
-project    -- operating-unit context, sources, decisions, risks, artifacts
-skills     -- reusable procedures and verification
-knowledge  -- disclosed corpus of knowledge and evidence
-meta       -- self-observation, upkeep, drift control, recursive improvement
-```
-
-`constitution` is not a replacement for those packages. It is the root contract that composes them.
-
-## How the packages fit together
-
-```text
-constitution      = root scaffold
-doctrine          = why and by what rules the system operates
-identity          = who participates
-project           = where a concrete operating unit does its work
-skills            = how repeatable procedures are performed
-knowledge         = what claims, sources, and evidence are retained
-meta              = how the system audits and improves itself
-living-knowledge  = optional addon for campaign-based maintenance of knowledge
+constitution      -> composes the ensemble
+doctrine          -> defines governing principles
+identity          -> defines participating actors and authority
+project           -> defines the concrete operating context
+skills            -> defines reusable procedures
+knowledge         -> defines retained claims and evidence
+models            -> defines available computational capabilities and constraints
+agents            -> composes actors, procedures, models, knowledge, and permissions
+living-knowledge  -> defines maintenance of changing corpora
+meta              -> defines audit, upkeep, and revision
 ```
 
 ## Boundary
@@ -75,16 +57,25 @@ This repository may contain:
 ```text
 constitution.md
 bundle metadata
-root scaffold instructions
 composition rules
+workspace scaffold instructions
 ```
 
-It must not duplicate the full content of `doctrine`, `identity`, `project`, `skills`, `knowledge`, or `meta`.
+It should not duplicate the full contents of the packages it composes.
 
-## Relationship to Workframe
+## Composition principles
 
-Workframe is not part of the constitution package. Workframe is an execution environment where one or more constitutions may be instantiated as governed human-agent workspaces.
+- Each concept has one primary home.
+- More specific layers may narrow general rules but should not silently contradict them.
+- Private instance data belongs in the instantiated workspace, not in public package templates.
+- Generated indexes, summaries, embeddings, and graph projections remain derived from canonical sources.
+- Authority, review gates, escalation paths, and stopping conditions should be explicit and proportionate to risk.
+- An artifact should exist only when it changes future action, preserves evidence, defines authority, routes to source truth, or removes demonstrated ambiguity.
+
+## Relationship to runtimes
+
+Architectonic packages are runtime-neutral. Workframe, command-line agents, hosted services, and other execution environments may instantiate the same constitution while retaining their own runtime concerns.
 
 ## Status
 
-Draft root scaffold. The CLI should install this package and the canonical layer packages directly from their source repositories.
+Draft composition contract for the full Architectonic ensemble.

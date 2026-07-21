@@ -1,5 +1,7 @@
 # Constitution
 
+**Architectonic layer:** [main CLI and adaptive profiles](https://github.com/architectonic/architectonic)
+
 > **Status: experimental, pre-1.0.** A constitution makes declared invariants and authority inspectable. It does not prove that the resulting system is correct, lawful, safe, or well governed.
 
 `constitution` is a **standalone layer** for what must remain true while a human–AI system changes.

@@ -1,36 +1,23 @@
 # Constitution
 
-> **Status: experimental, pre-1.0.** This package defines one layer of the Architectonic protocol. Evaluate it through its canonical contract, package validator, conformance manifest, and explicit limitations.
+> **Status: experimental, pre-1.0.** A constitution makes declared invariants and authority inspectable. It does not prove that the resulting system is correct, lawful, safe, or well governed.
 
-`constitution` defines what must remain true while a human–AI organization changes.
+`constitution` is a **standalone layer** for what must remain true while a human–AI system changes.
 
-## What it gives an agent
+Use it for:
 
-- one predictable home for this concern;
-- a canonical entry that can be found through `architectonic map`;
-- a machine-readable `architectonic.protocol.json`;
-- boundaries that prevent neighboring layers from silently owning the same concept;
-- package validation that runs against both the source checkout and the exact npm tarball.
+- non-negotiable invariants;
+- the human authority root;
+- prohibited actions and approval boundaries;
+- amendment and override rules;
+- composition rules between independently owned concerns.
 
-## Canonical entry
-
-```text
-constitution.md
-```
-
-## Boundary
-
-It does not own detailed project facts, actor records, procedures, knowledge corpora, model evaluations, agent instances, or maintenance logs.
-
-## Install
+Do not install a full organization merely to obtain a constitution.
 
 ```bash
-npx architectonic@latest add constitution --source npm
-npx architectonic@latest verify
+npx architectonic@latest init my-boundary --preset constitution --source npm
 ```
 
-Installing a layer provides reusable public structure. Organization-specific facts, private knowledge, credentials, runtime state, and local decisions belong only in controlled workspace instances.
+Add doctrine, identity, project, knowledge, agents, or meta only when those concerns need their own durable homes.
 
-## Claims
-
-This package claims only that its declared structure and validators are inspectable and reproducible. It does not claim universal performance improvement or domain correctness.
+See [`STANDALONE.md`](./STANDALONE.md) and [`constitution.md`](./constitution.md).

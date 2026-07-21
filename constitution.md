@@ -1,65 +1,50 @@
 ---
 type: Constitution
 title: Architectonic Constitution
-description: Root contract for composing a human-agent system from separable language-native layers.
-tags: [constitution, architectonic, doctrine, identity, project, skills, knowledge, meta, okf]
-okf_version: "0.1"
-status: draft
+description: Root contract for a human–AI organization composed from separable, agent-readable layers.
+tags: [constitution, architectonic, authority, composition, governance]
+protocol_version: "0.2.0"
+status: experimental
 ---
 
 # Architectonic Constitution
 
-A constitution is the root contract for a human-agent system.
+A constitution defines what must remain true while a human–AI organization changes.
 
-It defines what must remain true while the system changes.
+## Invariants
 
-## Core Layers
+1. Every durable concept has one primary home.
+2. More specific rules may narrow broader rules only within delegated authority.
+3. Sources outrank memory for empirical and project-native claims.
+4. Assumptions, contradictions, uncertainty, and known unknowns remain explicit.
+5. Capability does not create authority.
+6. Material actions require proportionate evidence, permissions, review, and stopping conditions.
+7. Generated indexes, summaries, embeddings, graphs, and model output remain derived from recoverable canonical sources.
+8. Implementations, providers, runtimes, and models remain replaceable where replacement is practical.
+9. Private organization data stays within its authorized boundary.
+10. Constitutional amendments are explicit, versioned, reasoned, and reviewable.
+
+## Composition
 
 ```text
-doctrine   = governing principles and admissible paths
-identity   = actors, roles, authority, incentives, privacy
-project    = operating unit, sources, decisions, risks, artifacts
-skills     = reusable procedures and verification
-knowledge  = disclosed corpus of knowledge and evidence
-meta       = upkeep, drift control, self-audit, recursive improvement
+constitution      invariants, authority roots, composition, amendment
+doctrine          general decision rules
+identity          actors, roles, authority, delegation, privacy
+project           bounded operating context
+skills            reusable verified procedures
+knowledge         claims, sources, evidence, uncertainty
+models            optional capability evidence and routing policy
+agents            composed software actors
+living-knowledge  optional maintenance for changing corpora
+meta              audit, drift review, revision, retirement
 ```
 
-## Faculty Map
+The constitution composes these layers without duplicating their contents.
 
-```text
-Archē      first principles
-Telos      purpose and direction
-Ethos      admissible conduct
-Nomos      authority, law, policy, governance
-Oikonomia  incentives, scarce resources, cost, risk, benefit
-Logos      reason-giving and account
-Ontos      what exists in the system
-Mnēmē      memory, traces, records
-Epistēmē   validation and justified knowledge
-Aletheia   disclosed corpus of system knowledge
-Technē     reusable craft and procedure
-Phronēsis  situated judgment
-Polis      organized collective
-Agora      deliberative arena
-Praxis     accountable action
-Poiesis    artifact production
-Sophia     recursive improvement of the whole
-Physis     adaptive growth without loss of identity
-```
+## Artifact rule
 
-Greek terms are conceptual grammar, not package names. Package names should remain operational and plain.
+A durable artifact should exist only when it changes future action, preserves evidence, defines authority, routes to source truth, records a consequential decision, or removes demonstrated ambiguity.
 
-## Rules
+## Limitation
 
-1. No layer may redefine another layer's primitive.
-2. A template is not knowledge until instantiated from sources, explicit answers, labeled assumptions, open questions, or documented decisions.
-3. Memory is context, not evidence.
-4. Skill success is not truth.
-5. Purpose does not justify forbidden means.
-6. Incentives, authority, and accountability must be explicit when multiple actors participate.
-7. The system should preserve identity by adapting, not by freezing.
-8. Meta-level upkeep must improve the system without hiding or bypassing governance.
-
-## Workframe Boundary
-
-Workframe is the execution environment for praxis and poiesis. The constitution defines what should be governed. Workframe executes governed work as runs, leases, artifacts, approvals, and ledger entries.
+Conformance to this constitution does not prove that an organization is correct, lawful, safe, efficient, or well governed. It makes its declared structure and boundaries inspectable.

@@ -1,6 +1,6 @@
 {
   "name": "architectonic-constitution",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Constitution layer for organizational invariants, composition, authority roots, and amendment boundaries.",
   "license": "Apache-2.0",
   "type": "module",
@@ -17,6 +17,7 @@
     "architectonic.protocol.json",
     "constitution.md",
     "architectonic.bundle.json",
+    "STANDALONE.md",
     "scripts"
   ],
   "scripts": {

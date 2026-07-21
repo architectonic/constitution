@@ -1,7 +1,8 @@
 {
-  "schema_version": 1,
-  "name": "constitution",
-  "description": "Default Architectonic scaffold composed from canonical source packages.",
+  "schema_version": 2,
+  "protocol_version": "0.2.0",
+  "name": "full",
+  "description": "Full Architectonic profile composed from canonical layer packages.",
   "layers": [
     "constitution",
     "doctrine",
@@ -9,10 +10,13 @@
     "project",
     "skills",
     "knowledge",
+    "models",
+    "agents",
+    "living-knowledge",
     "meta"
   ],
-  "aliases": {
-    "init": "constitution"
-  },
-  "source_policy": "Install layers directly from their canonical source repositories; do not duplicate layer contents inside this bundle."
+  "legacy_preset_aliases": [
+    "constitution"
+  ],
+  "source_policy": "Install canonical packages by explicit version and record their provenance in architectonic.json."
 }

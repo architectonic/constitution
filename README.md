@@ -1,75 +1,36 @@
----
-type: Entry Point
-title: constitution
-description: Composition contract for the Architectonic software ensemble.
-tags: [constitution, architectonic, composition, okf]
-okf_version: "0.2"
-status: draft
----
+# Constitution
 
-# constitution
+> **Status: experimental, pre-1.0.** This package defines one layer of the Architectonic protocol. Evaluate it through its canonical contract, package validator, conformance manifest, and explicit limitations.
 
-```bash
-npx architectonic add constitution
-```
+`constitution` defines what must remain true while a human–AI organization changes.
 
-`constitution` defines how Architectonic packages are composed into a coherent workspace for human-AI collaboration. It is the composition contract, not the source of truth for any layer it composes.
+## What it gives an agent
 
-`npx architectonic init` creates a workspace and installs the full ensemble.
+- one predictable home for this concern;
+- a canonical entry that can be found through `architectonic map`;
+- a machine-readable `architectonic.protocol.json`;
+- boundaries that prevent neighboring layers from silently owning the same concept;
+- package validation that runs against both the source checkout and the exact npm tarball.
 
-## In the ensemble
+## Canonical entry
 
 ```text
-constitution      composition contract for the ensemble
-doctrine          purpose, principles, ontology, epistemology, ethics, governance, incentives
-identity          actors, roles, authority, delegation, incentives, privacy
-project           operating-unit context, sources, decisions, risks, continuity
-skills            reusable procedures, verification, failure handling
-knowledge         claims, sources, evidence, uncertainty, known unknowns
-models            model metadata, evaluations, capability requirements, routing policy
-agents            software actors composed from identity, skills, models, knowledge, permissions
-living-knowledge  optional: governed maintenance of frequently changing corpora
-meta              audit, upkeep, drift review, revision policy
+constitution.md
 ```
-
-```text
-constitution      -> composes the ensemble
-doctrine          -> defines governing principles
-identity          -> defines participating actors and authority
-project           -> defines the concrete operating context
-skills            -> defines reusable procedures
-knowledge         -> defines retained claims and evidence
-models            -> defines computational capabilities and routing evidence
-agents            -> composes actors, procedures, models, knowledge, and permissions
-living-knowledge  -> defines maintenance of changing corpora
-meta              -> defines audit, upkeep, and revision
-```
-
-## Commands
-
-```bash
-npx architectonic init                      # install full ensemble
-npx architectonic add constitution
-npx architectonic add <layer> --source npm
-npx architectonic list
-npx architectonic doctor
-npx architectonic status
-npx architectonic update
-```
-
-CLI: https://github.com/architectonic/architectonic
 
 ## Boundary
 
-This repository may contain composition rules, bundle metadata, and workspace scaffold instructions. It should not duplicate the full contents of the packages it composes.
+It does not own detailed project facts, actor records, procedures, knowledge corpora, model evaluations, agent instances, or maintenance logs.
 
-## Composition principles
+## Install
 
-- Each concept has one primary home.
-- More specific layers may narrow general rules but should not silently contradict them.
-- Private instance data belongs in instantiated workspaces, not in public package templates.
-- Generated indexes, summaries, embeddings, and graph projections remain derived from canonical sources.
-- Authority, review gates, escalation paths, and stopping conditions should be explicit and proportionate to risk.
-- An artifact should exist only when it changes future action, preserves evidence, defines authority, routes to source truth, or removes demonstrated ambiguity.
+```bash
+npx architectonic@latest add constitution --source npm
+npx architectonic@latest verify
+```
 
-Architectonic packages are runtime-neutral. Workframe, command-line agents, hosted services, and other environments may instantiate the same constitution while retaining their own runtime concerns.
+Installing a layer provides reusable public structure. Organization-specific facts, private knowledge, credentials, runtime state, and local decisions belong only in controlled workspace instances.
+
+## Claims
+
+This package claims only that its declared structure and validators are inspectable and reproducible. It does not claim universal performance improvement or domain correctness.

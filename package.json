@@ -1,7 +1,7 @@
 {
   "name": "architectonic-constitution",
-  "version": "0.1.2",
-  "description": "Root constitutional scaffold for composing Architectonic layers.",
+  "version": "0.2.0",
+  "description": "Constitution layer for organizational invariants, composition, authority roots, and amendment boundaries.",
   "license": "Apache-2.0",
   "type": "module",
   "repository": {
@@ -13,13 +13,22 @@
   },
   "files": [
     "README.md",
+    "CHANGELOG.md",
+    "architectonic.protocol.json",
     "constitution.md",
-    "architectonic.bundle.json"
+    "architectonic.bundle.json",
+    "scripts"
   ],
+  "scripts": {
+    "validate": "node scripts/validate-package.mjs",
+    "test": "npm run validate"
+  },
   "keywords": [
     "architectonic",
     "constitution",
-    "okf",
-    "human-agent-systems"
+    "human-ai",
+    "agents",
+    "provenance",
+    "governance"
   ]
 }
